@@ -49,14 +49,15 @@ pipeline {
                     reuseNode true
                         }
                     }
-            // steps {
-            //  }
+             steps {
+              }
         }     
-        // stage('Remove local docker image') {
-        //     steps{
-        //         sh "docker rmi $imageName:latest"
-        //         sh "docker rmi $imageName:$BUILD_NUMBER"
-        //     }
-        // }
+         stage('Remove local docker image') {
+             steps{
+                 echo "removing local docker image"
+                //  sh "docker rmi $imageName:latest"
+                //  sh "docker rmi $imageName:$BUILD_NUMBER"
+             }
+         }
     }
 }
