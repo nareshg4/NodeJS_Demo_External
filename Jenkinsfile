@@ -2,7 +2,7 @@ pipeline {
     agent any 
     environment {
         registryCredential = 'dockerhub'
-        imageName = 'nareshg4/external:v1.3'
+        imageName = 'nareshg4/external:v1.4'
         dockerImage = ''
         }
     stages {
