@@ -35,8 +35,8 @@ app.engine('hbs', engine({
 // set up the parser to get the contents of data from html forms 
 // this would be used in a POST to the server as follows:
 // app.post('/route', urlencodedParser, (req, res) => {}
-const urlencodedParser = bodyParser.urlencoded({ extended: false });
-
+ const urlencodedParser = bodyParser.urlencoded({ extended: false });
+// const urlencodedParser = bodyParser.urlencoded({ extended: true });
 
 // defines a route that receives the request to /
 app.get('/', (req, res) => {
