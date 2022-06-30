@@ -41,25 +41,5 @@ pipeline {
                 }
             }
         }     
-         stage('deploy to k8s') {
-             agent {
-                docker { 
-                    image 'google/cloud-sdk:latest'
-                    args '-e HOME=/tmp'
-                    reuseNode true
-                        }
-                    }
-             steps{
-                script {
-                    echo 'deploy to k8' 
-              }
-        }     
-         stage('Remove local docker image') {
-             steps{
-                 echo "removing local docker image"
-                //  sh "docker rmi $imageName:latest"
-                //  sh "docker rmi $imageName:$BUILD_NUMBER"
-             }
-         }
-    }
+     }
 }
